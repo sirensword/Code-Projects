@@ -1,3 +1,4 @@
+/*Creating a database, creating a table and setting values within that table */
 USE mindset;
 CREATE TABLE manifest (
     author VARCHAR(30),
