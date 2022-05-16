@@ -1,0 +1,23 @@
+SELECT * FROM customer;
+
+SELECT * FROM sales;
+
+CREATE VIEW customer_sales AS
+SELECT a.customer_name,
+	   a.age,
+	   a.state,
+	   b.order_id,
+	   b.sales,
+	   b.profit
+FROM customer AS a
+LEFT JOIN sales AS b
+ON a.customer_id = b.customer_id
+ORDER by state;
+
+SELECT * FROM customer_sales;
+
+SELECT * FROM logistics;
+
+ALTER TABLE IF EXISTS sales_2015
+RENAME TO sales2015;
+
